@@ -31,3 +31,34 @@ npm run watch
 ```
 Скомпилировалось!
 
+## Building the Layout
+
+In this episode, we'll construct the main layout for our assets website. To streamline this process, I'll pull in [Tailwind](http://tailwindcss.com/) and add it to my [Laravel Mix](https://laracasts.com/series/learn-laravel-mix) build.
+
+https://tailwindcss.com/docs/installation
+1. Устанавливаем Tailwind via npm
+npm install tailwindcss --save-dev
+
+2. Create a Tailwind config file
+npx tailwind init
+
+3. Use Tailwind in your CSS
+Заменяем содержимое нашего файла `resources\sass\app.scss`
+
+4. Process your CSS with Tailwind
+- Делаем либо через npm
+- Либо [Ларавел-Микс](https://github.com/JeffreyWay/laravel-mix-tailwind) - `npm install laravel-mix-tailwind --save-dev`
+
+5. Настраиваем Webpack.mix.js
+
+6. `npm run dev`
+
+Работает!
+
+Теперь настроим внешний вид страниц.
+Добавим фонт Open Sans
+Добавим фонт в файл tailwind.js, чтобы потом использовать в html классы, например `<body class="font-sans">`
+
+Добавим 2 секции:
+- The brand
+- Doodles

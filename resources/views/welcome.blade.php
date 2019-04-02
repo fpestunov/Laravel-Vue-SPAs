@@ -5,16 +5,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel + Vue + SPAs</title>
-
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="/css/app.css">
     </head>
-    <body>
+    <body class="font-sans">
         <div id="app">
-            <router-view></router-view>
+            <div class="container mx-auto">
+                <header class="py-6 mb-8">
+                    <h1>Laravel School</h1>
+                </header>
+
+                <main class="flex">
+                    <aside class="w-1/5">
+                        <section class="mb-8">
+                            <h5 class="uppercase font-bold mb-4">Laravel</h5>
+
+                            <ul class="list-reset">
+                                <li class="text-sm leading-loose"><router-link class="text-black" to="/">Home</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">About</router-link></li>
+                            </ul>
+                        </section>
+                        
+                        <section>
+                            <h5 class="uppercase font-bold mb-4">Projects</h5>
+
+                            <ul class="list-reset">
+                                <li class="text-sm leading-loose"><router-link class="text-black" to="/">Chatty</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">Blog</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">Forum</router-link></li>
+                            </ul>
+                        </section>
+                        
+                    </aside>
+
+                    <div class="primary flex-1">
+                        <router-view></router-view>
+                    </div>
+                </main>
+            </div>
             
             <hr>
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About #1</router-link>
-            <router-link :to="{ name: 'about' }">About #2</router-link>
         </div>
 
         <script src="/js/app.js"></script>
