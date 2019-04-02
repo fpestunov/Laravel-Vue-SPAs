@@ -1,6 +1,6 @@
 #Laravel, Vue and SPAs
 
-## The Skeleton
+## 1. The Skeleton
 
 We'll begin with laravel new project. Following that, we'll incrementally pull in all necessary npm dependencies and construct the base skeleton for our "assets" website.
 
@@ -31,7 +31,7 @@ npm run watch
 ```
 Скомпилировалось!
 
-## Building the Layout
+## 2. Building the Layout
 
 In this episode, we'll construct the main layout for our assets website. To streamline this process, I'll pull in [Tailwind](http://tailwindcss.com/) and add it to my [Laravel Mix](https://laracasts.com/series/learn-laravel-mix) build.
 
@@ -62,3 +62,16 @@ npx tailwind init
 Добавим 2 секции:
 - The brand
 - Doodles
+
+## 3. One Component Per Page
+
+We'll take a one-component-per-page approach to this website. This means, for each link in the sidebar, we need to create a companion Vue component. When finished, we'll review how to apply "active link" styling to the currently selected page.
+
+- Добавим новые компоненты;
+- Сделаем выделение текущей выбранной кнопки;
+```
+<li class="text-sm leading-loose"><router-link active-class="font-bold" class="text-black" to="/" exact>Home</router-link></li>
+<li class="text-sm leading-loose"><router-link active-class="font-bold" class="text-black" :to="{ name: 'about' }">About</router-link></li>
+```
+
+- Но это не лучший вариант. Сделаем выделение используя Vue 

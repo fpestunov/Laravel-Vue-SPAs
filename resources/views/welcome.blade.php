@@ -21,7 +21,7 @@
                             <h5 class="uppercase font-bold mb-4">Laravel</h5>
 
                             <ul class="list-reset">
-                                <li class="text-sm leading-loose"><router-link class="text-black" to="/">Home</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" to="/" exact>Home</router-link></li>
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">About</router-link></li>
                             </ul>
                         </section>
@@ -30,9 +30,9 @@
                             <h5 class="uppercase font-bold mb-4">Projects</h5>
 
                             <ul class="list-reset">
-                                <li class="text-sm leading-loose"><router-link class="text-black" to="/">Chatty</router-link></li>
-                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">Blog</router-link></li>
-                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">Forum</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" to="{ name: 'chatty' }">Chatty</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'blog' }">Blog</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'forum' }">Forum</router-link></li>
                             </ul>
                         </section>
                         
