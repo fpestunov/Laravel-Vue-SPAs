@@ -30,7 +30,7 @@
                             <h5 class="uppercase font-bold mb-4">Projects</h5>
 
                             <ul class="list-reset">
-                                <li class="text-sm leading-loose"><router-link class="text-black" to="{ name: 'chatty' }">Chatty</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'chatty' }">Chatty</router-link></li>
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'blog' }">Blog</router-link></li>
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'forum' }">Forum</router-link></li>
                             </ul>
