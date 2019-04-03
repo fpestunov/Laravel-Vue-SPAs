@@ -5,6 +5,10 @@ import Blog from './components/Blog';
 import Forum from './components/Forum';
 import NotFound from './components/NotFound';
 
+// import Animations from './components/Animations';
+let Animations = () => 
+  import(/* webpackChunkName: "loaders" */ './components/Animations');
+
 export default {
     mode: 'history', // for hashing history
 
@@ -43,6 +47,12 @@ export default {
            path: '/projects/forum',
            component: Forum,
            name: 'forum'
+        },
+
+        {
+            path: '/animations',
+            component: Animations,
+            name: 'animations'
         },
     ]
 };

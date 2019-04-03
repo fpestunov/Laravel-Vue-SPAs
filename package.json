@@ -26,6 +26,8 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "lottie-web": "^5.5.0",
         "vue-router": "^3.0.2"
     }
 }

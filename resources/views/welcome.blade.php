@@ -10,15 +10,15 @@
     </head>
     <body class="font-sans">
         <div id="app">
-            <div class="container mx-auto">
-                <header class="py-6 mb-8">
+            <div class="container px-8">
+                <header class="p-6 mb-8" style="background: url('/images/splash.svg') 0 15px no-repeat;">
                     <h1>Laravel School</h1>
                 </header>
 
                 <main class="flex">
-                    <aside class="w-1/5">
-                        <section class="mb-8">
-                            <h5 class="uppercase font-bold mb-4">Laravel</h5>
+                    <aside class="w-1/5 pt-8">
+                        <section class="mb-10">
+                            <h5 class="uppercase font-bold mb-5 text-base">Laravel</h5>
 
                             <ul class="list-reset">
                                 <li class="text-sm leading-loose"><router-link class="text-black" to="/" exact>Home</router-link></li>
@@ -27,12 +27,13 @@
                         </section>
                         
                         <section>
-                            <h5 class="uppercase font-bold mb-4">Projects</h5>
+                            <h5 class="uppercase font-bold mb-4 text-base">Projects</h5>
 
                             <ul class="list-reset">
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'chatty' }">Chatty</router-link></li>
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'blog' }">Blog</router-link></li>
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'forum' }">Forum</router-link></li>
+                                <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'animations' }">Animations</router-link></li>
                             </ul>
                         </section>
                         

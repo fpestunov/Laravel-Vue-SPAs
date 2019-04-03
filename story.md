@@ -75,3 +75,40 @@ We'll take a one-component-per-page approach to this website. This means, for ea
 ```
 
 - Но это не лучший вариант. Сделаем выделение используя Vue 
+
+## 4. 404 Pages
+
+What if the user visits a URI that doesn't exist? At the moment, they'll see a blank page. Not good. Let's fix that by creating a NotFound component.
+
+## 5. General Page Styling
+
+With the basic structure in place, we can now move on to general page styling and tweaks.
+
+Добавили некоторые улучшения.
+
+## 6. Lazy Loading Routes
+
+To help improve performance, any route can be lazily-loaded by embracing Vue's async components and webpack's code-splitting feature. Don't worry: I hate confusing jargon, too. Let's break it down and review exactly when and why you might consider lazy loading certain routes in your app.
+
+Рассмотрим динамическую загрузку компонента для определенной страницы.
+При импорте выдает ошибку. Необходимо загрузить `Babel`: 
+```
+npm install @babel/plugin-syntax-dynamic-import
+```
+
+Добавляем конфигурационный файл: `.babelrc`, данные из него будут загружаться Миксом автоматически.
+
+Теперь компиляция работает и доп. файлы добавляются. Отлично. Только имена файлов `0.js`, `1.js`...
+
+Изменим настройку импорта:
+```
+// let Animations = () => import('./components/Animations');
+let Animations = () => import(/* webpackChunkName: ""loaders */ './components/Animations');
+```
+
+Устанавливаем:
+http://airbnb.io/lottie
+`npm install lottie-web`
+
+
+Тестируем работу подгрузки библиотек через DevTools, cache=Disabled и меняем XHR/JS.
