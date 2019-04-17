@@ -25,8 +25,8 @@
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'about' }">About</router-link></li>
                             </ul>
                         </section>
-                        
-                        <section>
+
+                        <section class="mb-10">
                             <h5 class="uppercase font-bold mb-4 text-base">Projects</h5>
 
                             <ul class="list-reset">
@@ -36,7 +36,15 @@
                                 <li class="text-sm leading-loose"><router-link class="text-black" :to="{ name: 'animations' }">Animations</router-link></li>
                             </ul>
                         </section>
-                        
+
+                        <section>
+                            <h5 class="uppercase font-bold mb-4 text-base">Stats</h5>
+
+                            <ul class="list-reset">
+                                <li class="text-sm leading-loose"><router-link class="text-black" to="/site-stats">Site Stats</router-link></li>
+                            </ul>
+                        </section>
+
                     </aside>
 
                     <div class="primary flex-1">
@@ -44,7 +52,7 @@
                     </div>
                 </main>
             </div>
-            
+
             <hr>
         </div>
 

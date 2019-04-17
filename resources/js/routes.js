@@ -4,9 +4,10 @@ import Chatty from './components/Chatty';
 import Blog from './components/Blog';
 import Forum from './components/Forum';
 import NotFound from './components/NotFound';
+import SiteStats from './components/SiteStats';
 
 // import Animations from './components/Animations';
-let Animations = () => 
+let Animations = () =>
   import(/* webpackChunkName: "loaders" */ './components/Animations');
 
 export default {
@@ -22,7 +23,7 @@ export default {
 
         {
            path: '/',
-           component: Home 
+           component: Home
         },
 
         {
@@ -53,6 +54,11 @@ export default {
             path: '/animations',
             component: Animations,
             name: 'animations'
+        },
+
+        {
+            path: '/site-stats',
+            component: SiteStats
         },
     ]
 };

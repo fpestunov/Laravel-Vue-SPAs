@@ -110,5 +110,22 @@ let Animations = () => import(/* webpackChunkName: ""loaders */ './components/An
 http://airbnb.io/lottie
 `npm install lottie-web`
 
-
 Тестируем работу подгрузки библиотек через DevTools, cache=Disabled и меняем XHR/JS.
+
+## 7. Cross-Origin Resource Sharing (CORS)
+
+Due to security concerns, it's not always so easy to make a cross-origin AJAX request to fetch a particular set of data. Instead, you'll often be met with the dreaded `No 'Access-Control-Allow-Origin' header is present on the requested resource` response. Let's discuss what this header means, and how we can fix it.
+
+Приступим:
+- добавим пункт меню SiteStats;
+- добавим компонент SiteStats;
+- теперь нам надо сделать несколько запросов к API;
+- добавим в Ларавел api-route;
+- проверяем его доступность [http://localhost/api/stats](http://localhost/api/stats);
+- пишем в компоненте ajax запрос и смотрим результат в консоли...;
+- Ах! Axios не определен, прописываем;
+- если мы берем данные с другого сервера, то можем получить ошибку CORS!!!
+- `php artisan make:middleware Cors`
+- редакрируем файл `app/http/middleware/Cors.php`, делаем доступ к нему ото всюду;
+- редакрируем файл `app/http/Kernel.php`, добавляем в него файл `Cors.php`;
+- работает!
